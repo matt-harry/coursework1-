@@ -5,8 +5,10 @@ def search(userdata):
       reader = csv.DictReader(records)
       for row in reader:
             if row['Composer']==userdata:
-                return row['BL record ID']
-            else: return('Not found')
+              return row['BL record ID']
+
+
+
 
 composerinput = input("Search for a composer: ")
 search(composerinput)
