@@ -1,0 +1,12 @@
+import csv
+
+def search(userdata):
+   with open('bl_printed_music_500.csv', newline='', encoding="utf-8-sig") as records:
+      reader = csv.DictReader(records)
+      for row in reader:
+            if row['Composer']==userdata:
+                return row['BL record ID']
+            else: return('Not found')
+
+composerinput = input("Search for a composer: ")
+search(composerinput)
